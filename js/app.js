@@ -33,6 +33,7 @@ const loader = document.getElementById('loader');
 const register = document.querySelector('.register-page');
 const profile = document.querySelector('.profile-page');
 const disclaimer = document.querySelector('.disclaimer');
+const contacts = document.querySelector('.contacts');
 const settings = document.querySelector('.settings-page');
 const login = document.querySelector('.login-page');
 const email = document.querySelector('.email-page');
@@ -51,6 +52,7 @@ const registerPageBtn =  document.getElementById('register-p-btn')
 const emailPageBtn =  document.getElementById('email-p-btn')
 const emailPageBtn2 =  document.getElementById('email-p-btn2')
 const disclaimerPageBtn =  document.getElementById('disc-p-btn')
+const contactPageBtn =  document.getElementById('cont-p-btn')
 const homeBtn =  document.getElementById('home-btn')
 const loginHomePage =  document.getElementById('login-home-page')
 const registerHomePage =  document.getElementById('register-home-page')
@@ -63,6 +65,7 @@ register.style.display = 'none';
 email.style.display = 'none';
 profile.style.display = 'none';
 disclaimer.style.display = 'none';
+contacts.style.display = 'none';
 settings.style.display = 'none';
 login.style.display = 'none';
 
@@ -95,6 +98,7 @@ settingsPageBtn.addEventListener('click', () => {
 homeBtn.addEventListener('click', () => {
     settings.style.display = 'none';
     disclaimer.style.display = 'none';
+    contacts.style.display = 'none';
     email.style.display = 'none';
     login.style.display = 'none';
     register.style.display = 'none';
@@ -122,6 +126,23 @@ disclaimerPageBtn.addEventListener('click', () => {
 
     setTimeout(function() {
         disclaimer.style.display = 'block';
+        loader.style.display = 'none';
+    },2000)
+})
+
+// 
+// contacts Page
+contactPageBtn.addEventListener('click', () => {
+    settings.style.display = 'none';
+    profile.style.display = 'none';
+    disclaimer.style.display = 'none';
+    email.style.display = 'none';
+    login.style.display = 'none';
+    register.style.display = 'none';
+    loader.style.display = 'block';
+
+    setTimeout(function() {
+        contacts.style.display = 'block';
         loader.style.display = 'none';
     },2000)
 })
