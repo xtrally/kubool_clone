@@ -666,7 +666,7 @@ label {
     padding: 7px 5px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
     border-bottom: 1px solid rgb(79,107,252);
     width: 100%;
     padding: 0 0.2rem 0.5rem;
@@ -1099,6 +1099,29 @@ box-sizing: border-box;
     #home-footer-container {
         padding: 20px 40px;
     }
+
+
+
+    
+
+    #screenshot h4 {
+        font-size: 2rem;
+    }
+    #screenshot p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    #why p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    #screenshot {
+        padding: 20px 30px;
+    }
+    #why {
+        padding: 20px 30px;
+    }
     .screenshot-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -1108,10 +1131,11 @@ box-sizing: border-box;
     .screen-img {
         padding: 0.4rem;
         margin: 0.8rem auto;
-        width: 50%;
+        width: 80%;
     }
     .screen-img img {
         margin: 0 auto;
+        width: 90%;
     }
     .why-grid-container {
         grid-template-columns: 1fr 1fr;
@@ -1137,7 +1161,7 @@ box-sizing: border-box;
     .top-content {
         flex-direction: column;
         justify-content: space-between;
-        margin: 3rem 0;
+        margin: 2rem 0;
         
     }
     nav {
@@ -1172,6 +1196,11 @@ box-sizing: border-box;
 }
 
 @media screen and (max-width: 700px) {
+    .top-screen p {
+        font-size: 1.3rem;
+        /* text-align: left; */
+        line-height: 1.5;
+    }
     #home-footer-container {
         padding: 10px 10px;
         flex-direction: column;
@@ -1188,12 +1217,16 @@ box-sizing: border-box;
     .why-grid-container {
         grid-template-columns: 1fr 1fr;
     }
-    .screenshot {
-        padding: 20px 10px;
+    #screenshot {
+        padding: 20px 30px;
+    }
+
+    .screen-img img {
+        width: 100% !important;
     }
     .screenshot-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         justify-content: center;
         align-items: center;
     }
@@ -1205,34 +1238,79 @@ box-sizing: border-box;
     .screen-img img {
         margin: 0 auto;
     }
-    
-}
-@media screen and (max-width: 670px) {
+
+    .top-why p {
+        width: 100%;
+        text-align: left;
+    }
+
     .why-grid-container {
         grid-template-columns: 1fr;
         width: 100%;
     }
     .why-grids {
         margin: 1rem auto;
-        width: 80%;
         text-align: center;
     }
     .why-grids p {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
     }
-}
+    #why h4 {
+        text-align: left;
+    }
 
-@media screen and (max-width: 600px) {
     .top-content {
         box-sizing: border-box;
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px !important;
+        padding-left: 10px;
+        padding-right: 10px;
         justify-content: center;
         align-items: center;
     }
+
+    .left-text {
+        flex-basis: 100%;
+        color: #fff;
+        padding: 2rem 0 0;
+    }
+    
+    .left-text h4 {
+        opacity: .8;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .left-text p {
+        line-height: 1.7;
+        width: 100%;
+        font-size: 15px;
+        opacity: .9;
+        padding-top: 1rem;
+    }
+    
+    .left-text .anonym {
+        background: #fff;
+        color: #2e4053;
+        border-radius: 3px;
+        padding: 0.4rem 0.7rem;
+        font-size: 1.9rem;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    
     #download {
         padding: 2rem 0;
     }
@@ -1248,6 +1326,15 @@ box-sizing: border-box;
 }
 
 @media screen and (max-width: 500px) {
+    .top-screen p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    .screen-img {
+        padding: 0.4rem;
+        margin: 0.8rem auto;
+        width: 70%;
+    }
     .inner-container {
         width: 100%;
         padding: 1.5rem 1rem;
@@ -1274,6 +1361,15 @@ box-sizing: border-box;
     .right-home-footer {
         margin: 1rem 0;
     }
+    
+}
+
+@media screen and (max-width: 299px) {
+    .left-text .anonym {
+        font-size: 1.2rem;
+    }
+    .left-text h4 {
+        font-size: 1.6rem;
     
 }
 
