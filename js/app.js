@@ -53,6 +53,8 @@ const emailPageBtn =  document.getElementById('email-p-btn')
 const emailPageBtn2 =  document.getElementById('email-p-btn2')
 const disclaimerPageBtn =  document.getElementById('disc-p-btn')
 const contactPageBtn =  document.getElementById('cont-p-btn')
+const contactPageBtn1 =  document.getElementById('cont-p-btn1')
+const contactPageBtn2 =  document.getElementById('cont-p-btn2')
 const homeBtn =  document.getElementById('home-btn')
 const loginHomePage =  document.getElementById('login-home-page')
 const registerHomePage =  document.getElementById('register-home-page')
@@ -119,6 +121,7 @@ homeBtn.addEventListener('click', () => {
 disclaimerPageBtn.addEventListener('click', () => {
     settings.style.display = 'none';
     profile.style.display = 'none';
+    contacts.style.display = 'none';
     email.style.display = 'none';
     login.style.display = 'none';
     register.style.display = 'none';
@@ -143,6 +146,47 @@ contactPageBtn.addEventListener('click', () => {
 
     setTimeout(function() {
         contacts.style.display = 'block';
+        loader.style.display = 'none';
+    },2000)
+})
+
+// contacts Page 1
+contactPageBtn1.addEventListener('click', () => {
+    settings.style.display = 'none';
+    profile.style.display = 'none';
+    disclaimer.style.display = 'none';
+    email.style.display = 'none';
+    login.style.display = 'none';
+    register.style.display = 'none';
+    mainComponent.style.display = 'none';
+    mobileNav.style.display = 'none';
+    homePageLoader.style.display = 'block';
+    loader.style.display = 'block';
+
+    setTimeout(function() {
+        mainContainer.style.display = 'block';
+        contacts.style.display = 'block';
+        homePageLoader.style.display = 'none';
+        loader.style.display = 'none';
+    },2000)
+})
+
+// contacts Page 2
+contactPageBtn2.addEventListener('click', () => {
+    settings.style.display = 'none';
+    profile.style.display = 'none';
+    disclaimer.style.display = 'none';
+    email.style.display = 'none';
+    login.style.display = 'none';
+    register.style.display = 'none';
+    mainComponent.style.display = 'none';
+    homePageLoader.style.display = 'block';
+    loader.style.display = 'block';
+
+    setTimeout(function() {
+        mainContainer.style.display = 'block';
+        contacts.style.display = 'block';
+        homePageLoader.style.display = 'none';
         loader.style.display = 'none';
     },2000)
 })
